@@ -1,0 +1,25 @@
+:root{
+  --mainBg: #86AB89;
+  --mainColor: #E7FBE6;
+  --buttonHover: #a28b553b;
+  --buttonActive: rgba(162, 139, 85, 0.7);
+  --borderColor: rgb(162, 139, 85);
+  --selectBg: #CBE2B5;
+  --selectColor: rgb(24, 66, 9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  --mainFont: 'Poppins';
+  --logoFont: 'Rammetto One';
+}
