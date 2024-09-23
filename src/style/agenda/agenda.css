@@ -1,11 +1,11 @@
 .main {
   .agenda {
-    padding: 0 45px;
-
     .agenda__nav {
       display: flex;
       align-items: center;
       gap: 60px;
+      padding: 0 45px;
+
 
       .agenda__nav__regulations {
         display: flex;
@@ -83,6 +83,57 @@
       .agenda__nav__month {
         font-size: 21px;
         font-weight: 500;
+      }
+    }
+
+    .agenda__content {
+      height: inherit;
+      margin-top: 25px;
+      padding: 0 25px;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+
+      .agenda__content__day {
+        border-right: var(--borderWidth) solid var(--border);
+
+
+        &:first-of-type {
+          border-left: var(--borderWidth) solid var(--border);
+        }
+
+        .agenda__content__day__title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          text-align: center;
+          font-weight: 400;
+          font-size: 18px;
+          border: var(--borderWidth) solid var(--border);
+          border-right: none;
+          border-left: none;
+          user-select: none;
+        }
+
+        .agenda__content__day__week__day {
+          height: 120px;
+          cursor: pointer;
+          transition: background-color ease-in-out 0.2s;
+
+          &:not(:last-child) {
+            border-bottom: var(--borderWidth) solid var(--border);
+          }
+
+          @media (min-height: 995px) {
+            &:nth-child(7) {
+              border-bottom: var(--borderWidth) solid var(--border);
+            }
+          }
+
+          &:hover {
+            background: var(--hoverDaySection);
+          }
+        }
       }
     }
   }

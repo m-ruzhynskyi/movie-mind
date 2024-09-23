@@ -1,25 +1,19 @@
-:root{
+:root {
   --mainBg: #86AB89;
   --mainColor: #E7FBE6;
   --buttonHover: #a28b553b;
   --buttonActive: rgba(162, 139, 85, 0.7);
-  --borderColor: rgb(162, 139, 85);
+  --buttonText: white;
+  --buttonColor: #A28B55;
+  --borderColor: #A28B55;
   --selectBg: #CBE2B5;
   --selectColor: rgb(24, 66, 9);
+  --border: #CBE2B5;
+  --hoverDaySection: rgba(175, 208, 182, 0.52);
+  --formBg: #F8F8F8;
+  --inputTextColor: #4d4d4d;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  --borderWidth: 3px;
   --mainFont: 'Poppins';
   --logoFont: 'Rammetto One';
 }

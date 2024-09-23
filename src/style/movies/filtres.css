@@ -1,0 +1,83 @@
+.movies__main {
+  padding: 0 50px;
+
+  .movies__main__filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 260px;
+    font-size: 21px;
+
+
+    .movies__main__filters__sort {
+      .movies__main__filters__sort__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        border: var(--borderWidth) solid var(--borderColor);
+        padding: 15px;
+        user-select: none;
+
+        .movies__main__filters__sort__arrow {
+          width: 16px;
+          aspect-ratio: 1/1;
+        }
+
+        .movies__main__filters__sort__title {
+          font-weight: 500;
+        }
+      }
+
+      .movies__main__filters__sort__dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: var(--borderWidth) solid var(--borderColor);
+        border-top: none;
+        border-radius: 0 0 25px 25px;
+        padding: 15px;
+        user-select: none;
+
+        .movies__main__filters__sort__dropdown__select {
+          border: 2px solid var(--borderColor);
+          outline: none;
+          padding: 5px;
+
+          .movies__main__filters__sort__dropdown__select__option {
+            padding: 5px;
+
+            &:checked {
+              background: var(--buttonActive);
+            }
+
+            &:hover {
+              background: var(--hoverDaySection);
+              color:red;
+            }
+          }
+
+
+        }
+      }
+    }
+
+
+    & > div {
+      width: 100%;
+    }
+
+    .fullBorders{
+      border-radius: 25px;
+    }
+
+    .halfBorders {
+      border-radius: 25px 25px 0 0;
+    }
+
+    .hidedDropdown {
+      display: none !important;
+    }
+  }
+}
