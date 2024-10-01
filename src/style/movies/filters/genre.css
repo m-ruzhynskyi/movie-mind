@@ -1,0 +1,40 @@
+.main {
+  .movies__main {
+    .movies__main__filters {
+      .movies__main__filters__filters {
+        .movies__main__filters__filters__dropdown {
+          .movies__main__filters__filters__dropdown__genres {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .movies__main__filters__filters__dropdown__genres__ul {
+              list-style: none;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+
+              .movies__main__filters__filters__dropdown__genres__ul__li {
+                font-weight: 400;
+                font-size: 18px;
+                border-radius: 25px;
+                border: 1px solid var(--borderColor);
+                padding: 5px 10px;
+                cursor: pointer;
+                transition: background-color ease-in-out 0.25s;
+
+                &:hover {
+                  background: var(--selectColor);
+                }
+              }
+
+              .active {
+                background: var(--selectColor)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

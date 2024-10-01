@@ -30,7 +30,112 @@
     </nav>
   </header>
   <main class="main">
-    <section class="agenda">
+    <section class="movies">
+      <div class="movies__header__wrapper">
+        <header class="container movies__header">
+          <h1 class="movies__header__title">Welcome. <br>
+            Millions of movies, TV shows and people to discover. Explore now.</h1>
+          <form class="movies__header__search">
+            <input class="movies__header__search__input" type="text"
+                   placeholder="Search for a movie, tv show, person......" required>
+            <button class="movies__header__search__button">Search</button>
+          </form>
+        </header>
+      </div>
+      <main class="movies__main container">
+        <div class="movies__main__filters">
+          <div class='movies__main__filters__sort filter'>
+            <div class="movies__main__filters__wrapper filter__wrapper hided">
+              <p class="movies__main__filters__sort__title filter__wrapper__title">Sort</p>
+              <img class="movies__main__filters__sort__arrow filter__wrapper__arrow" src="assets/svg/arrow.svg"
+                   alt="Arrow">
+            </div>
+            <div class="movies__main__filters__sort__dropdown filter__wrapper__dropdown hidedDropdown">
+              <p class="movies__main__filters__sort__dropdown__title filter__wrapper__dropdown__title ">Sort Results
+                By</p>
+              <label>
+                <select class="movies__main__filters__sort__dropdown__select filter__wrapper__dropdown__select">
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="popularity.desc"
+                      selected>
+                    Popularity Descending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="popularity.asc">
+                    Popularity Ascending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="vote_average.desc">Rating
+                    Descending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="vote_average.asc">Rating
+                    Ascending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="release_date.desc">
+                    Release Date Descending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="release_date.asc">Release
+                    Date Ascending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="original_title.desc">
+                    Original Title Descending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="original_title.asc">
+                    Original Title Ascending
+                  </option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class='movies__main__filters__filters filter'>
+            <div class="movies__main__filters__filters__wrapper filter__wrapper hided">
+              <p class="movies__main__filters__sort__title filter__wrapper__title">Filters</p>
+              <img class="movies__main__filters__sort__arrow filter__wrapper__arrow" src="assets/svg/arrow.svg"
+                   alt="Arrow">
+            </div>
+            <div class="movies__main__filters__filters__dropdown hidedDropdown filter__wrapper__dropdown">
+              <div class="movies__main__filters__filters__dropdown__releaseDate">
+                <p class="movies__main__filters__filters__dropdown__releaseDate__title filter__wrapper__dropdown__title">
+                  Release Date</p>
+                <form class="sliders_control">
+                  <label class="sliders_control__label sliders_control__label__releaseDate-from"
+                         for="fromSlider">1900</label>
+                  <input class="sliders_control__releaseDate-from" type="range" min="1900" max="2024" value="2024"
+                         id="fromSlider">
+                  <label class="sliders_control__label sliders_control__label__releaseDate-to"
+                         for="toSlider">2024</label>
+                  <input class="sliders_control__releaseDate-to" type="range" min="1900" max="2024" value="1900"
+                         id="toSlider">
+                </form>
+              </div>
+              <div class="movies__main__filters__filters__dropdown__genres">
+                <p class="movies__main__filters__filters__dropdown__genres__title filter__wrapper__dropdown__title">
+                  Genres</p>
+                <ul class="movies__main__filters__filters__dropdown__genres__ul">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="movies__main__films">
+
+        </div>
+      </main>
+    </section>
+    <section style="display: none" class="agenda">
       <div class="agenda__nav">
         <button class="agenda__nav__button">Today</button>
         <div class="agenda__nav__regulations">
@@ -156,64 +261,6 @@
           <div class="agenda__content__day__week__day"></div>
         </div>
       </div>
-    </section>
-    <section class="movies">
-      <div class="movies__header__wrapper">
-        <header class="container movies__header">
-          <h1 class="movies__header__title">Welcome. <br>
-            Millions of movies, TV shows and people to discover. Explore now.</h1>
-          <form class="movies__header__search">
-            <input class="movies__header__search__input" type="text"
-                   placeholder="Search for a movie, tv show, person......" required>
-            <button class="movies__header__search__button">Search</button>
-          </form>
-        </header>
-      </div>
-      <main class="movies__main container">
-        <div class="movies__main__filters">
-          <div class='movies__main__filters__sort'>
-            <div class="movies__main__filters__sort__wrapper hided">
-              <p class="movies__main__filters__sort__title">Sort</p>
-              <img class="movies__main__filters__sort__arrow" src="assets/svg/arrow.svg" alt="Arrow">
-            </div>
-            <div class="movies__main__filters__sort__dropdown hidedDropdown">
-              <p class="movies__main__filters__sort__dropdown__title">Sort Results By</p>
-              <label>
-                <select class="movies__main__filters__sort__dropdown__select">
-                  <option class="movies__main__filters__sort__dropdown__select__option" value="popularity.desc" selected>
-                    Popularity Descending
-                  </option>
-                  <option class="movies__main__filters__sort__dropdown__select__option" value="popularity.asc">
-                    Popularity Ascending
-                  </option>
-                  <option class="movies__main__filters__sort__dropdown__select__option" value="vote_average.desc">Rating
-                    Descending
-                  </option>
-                  <option class="movies__main__filters__sort__dropdown__select__option" value="vote_average.asc">Rating
-                    Ascending
-                  </option>
-                  <option class="movies__main__filters__sort__dropdown__select__option" value="release_date.desc">
-                    Release Date Descending
-                  </option>
-                  <option class="movies__main__filters__sort__dropdown__select__option" value="release_date.asc">Release
-                    Date Ascending
-                  </option>
-                  <option class="movies__main__filters__sort__dropdown__select__option" value="original_title.desc">
-                    Original Title Descending
-                  </option>
-                  <option class="movies__main__filters__sort__dropdown__select__option" value="original_title.asc">
-                    Original Title Ascending
-                  </option>
-                </select>
-              </label>
-            </div>
-          </div>
-          <div></div>
-        </div>
-        <div class="movies__main__films">
-
-        </div>
-      </main>
     </section>
   </main>
 </div>

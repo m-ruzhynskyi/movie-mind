@@ -1,3 +1,6 @@
+@import url('./slidersControl.css');
+@import url('./genre.css');
+
 .movies__main {
   padding: 0 50px;
 
@@ -10,8 +13,8 @@
     font-size: 21px;
 
 
-    .movies__main__filters__sort {
-      .movies__main__filters__sort__wrapper {
+    .movies__main__filters__sort, .movies__main__filters__filters {
+      .filter__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -20,17 +23,17 @@
         padding: 15px;
         user-select: none;
 
-        .movies__main__filters__sort__arrow {
+        .filter__wrapper__arrow {
           width: 16px;
           aspect-ratio: 1/1;
         }
 
-        .movies__main__filters__sort__title {
+        .filter__wrapper__title {
           font-weight: 500;
         }
       }
 
-      .movies__main__filters__sort__dropdown {
+      .filter__wrapper__dropdown {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -40,12 +43,16 @@
         padding: 15px;
         user-select: none;
 
-        .movies__main__filters__sort__dropdown__select {
+        .filter__wrapper__dropdown__title {
+          font-size: 18px;
+        }
+
+        .filter__wrapper__dropdown__select {
           border: 2px solid var(--borderColor);
           outline: none;
           padding: 5px;
 
-          .movies__main__filters__sort__dropdown__select__option {
+          .filter__wrapper__dropdown__select__option {
             padding: 5px;
 
             &:checked {
@@ -54,21 +61,27 @@
 
             &:hover {
               background: var(--hoverDaySection);
-              color:red;
+              color: red;
             }
           }
-
-
         }
       }
     }
 
+    .movies__main__filters__filters {
+      .movies__main__filters__filters__dropdown__releaseDate {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        border-bottom: var(--borderWidth) var(--borderColor) solid;
+      }
+    }
 
     & > div {
       width: 100%;
     }
 
-    .fullBorders{
+    .fullBorders {
       border-radius: 25px;
     }
 

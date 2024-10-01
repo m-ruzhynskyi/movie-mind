@@ -33,3 +33,4 @@ links.forEach(link =>
 );
 
 document.addEventListener('DOMContentLoaded', () => goToAnotherPage('movies'));
+window.addEventListener('beforeunload', () => localStorage.clear());
