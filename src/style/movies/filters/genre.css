@@ -22,9 +22,14 @@
                 padding: 5px 10px;
                 cursor: pointer;
                 transition: background-color ease-in-out 0.25s;
+                height: max-content;
 
                 &:hover {
                   background: var(--selectColor);
+                }
+
+                &:last-of-type{
+                  margin-bottom: 25px;
                 }
               }
 

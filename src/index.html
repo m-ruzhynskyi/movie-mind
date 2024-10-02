@@ -111,13 +111,13 @@
                 <p class="movies__main__filters__filters__dropdown__releaseDate__title filter__wrapper__dropdown__title">
                   Release Date</p>
                 <form class="sliders_control">
-                  <label class="sliders_control__label sliders_control__label__releaseDate-from"
-                         for="fromSlider">1900</label>
-                  <input class="sliders_control__releaseDate-from" type="range" min="1900" max="2024" value="2024"
+                  <label class="sliders_control__label sliders_control__label__releaseDate-from sliders_control__label-from"
+                         for="fromSlider"><span class="sliders_control__label__span-from">1900</span></label>
+                  <input class="sliders_control__releaseDate-from sliders_control-from" type="range" min="1900" max="2024" value="2024"
                          id="fromSlider">
-                  <label class="sliders_control__label sliders_control__label__releaseDate-to"
-                         for="toSlider">2024</label>
-                  <input class="sliders_control__releaseDate-to" type="range" min="1900" max="2024" value="1900"
+                  <label class="sliders_control__label sliders_control__label__releaseDate-to sliders_control__label-to"
+                         for="toSlider"><span class="sliders_control__label__span-to">2024</span></label>
+                  <input class="sliders_control__releaseDate-to sliders_control-to" type="range" min="1900" max="2024" value="1900"
                          id="toSlider">
                 </form>
               </div>
@@ -126,6 +126,34 @@
                   Genres</p>
                 <ul class="movies__main__filters__filters__dropdown__genres__ul">
                 </ul>
+              </div>
+              <div class="movies__main__filters__filters__dropdown__rating">
+                <p class="movies__main__filters__filters__dropdown__rating__title filter__wrapper__dropdown__title">
+                  Rating</p>
+                <form class="sliders_control">
+                  <label class="sliders_control__label sliders_control__label__rating-from sliders_control__label-from"
+                         for="fromSliderRating"><span class="sliders_control__label__span-from">0</span></label>
+                  <input class="sliders_control__rating-from sliders_control-from" type="range" min="0" max="10" value="10"
+                         id="fromSliderRating">
+                  <label class="sliders_control__label sliders_control__label__rating-to sliders_control__label-to"
+                         for="toSliderRating"><span class="sliders_control__label__span-to">10</span></label>
+                  <input class="sliders_control__rating-to sliders_control-to" type="range" min="0" max="10" value="0"
+                         id="toSliderRating">
+                </form>
+              </div>
+              <div class="movies__main__filters__filters__dropdown__runTime"  >
+                <p class="movies__main__filters__filters__dropdown__runTime__title filter__wrapper__dropdown__title">
+                  Runtime</p>
+                <form class="sliders_control">
+                  <label class="sliders_control__label sliders_control__label__runTime-from sliders_control__label-from"
+                         for="fromSliderRunTime"><span class="sliders_control__label__span-from">0</span> minutes</label>
+                  <input class="sliders_control__runTime-from sliders_control-from" type="range" min="0" max="400" value="400" step="10"
+                         id="fromSliderRunTime">
+                  <label class="sliders_control__label sliders_control__label__runTime-to sliders_control__label-to"
+                         for="toSliderRunTime"><span class="sliders_control__label__span-to">400</span> minutes</label>
+                  <input class="sliders_control__runTime-to sliders_control-to" type="range" min="0" max="400" value="0" step="10"
+                         id="toSliderRunTime">
+                </form>
               </div>
             </div>
           </div>

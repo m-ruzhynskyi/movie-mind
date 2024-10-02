@@ -69,7 +69,7 @@
     }
 
     .movies__main__filters__filters {
-      .movies__main__filters__filters__dropdown__releaseDate {
+      .movies__main__filters__filters__dropdown__releaseDate, .movies__main__filters__filters__dropdown__rating, .movies__main__filters__filters__dropdown__genres, .movies__main__filters__filters__dropdown__runTime {
         display: flex;
         flex-direction: column;
         gap: 25px;
