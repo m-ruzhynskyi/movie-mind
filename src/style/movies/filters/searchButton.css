@@ -1,0 +1,30 @@
+.movies {
+  .movies__main {
+    .movies__main__filters {
+      .movies__main__filters__button {
+        width: 100%;
+        border-radius: 35px;
+        border: var(--borderWidth) var(--borderColor) solid;
+        font-size: 20px;
+        padding: 5px 0;
+        cursor: pointer;
+        background-color: var(--buttonActive);
+        transition: background-color ease-in-out 0.25s;
+
+        &:hover {
+          background: var(--buttonHover);
+        }
+      }
+
+      .disabled {
+        cursor: not-allowed;
+        background-color: var(--disabled);
+        border-color: var(--disabledBorder);
+
+        &:hover {
+          background-color: var(--disabled);
+        }
+      }
+    }
+  }
+}

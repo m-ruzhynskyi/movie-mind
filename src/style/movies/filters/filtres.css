@@ -1,5 +1,6 @@
 @import url('./slidersControl.css');
 @import url('./genre.css');
+@import url('./searchButton.css');
 
 .movies__main {
   padding: 0 50px;
@@ -30,6 +31,12 @@
 
         .filter__wrapper__title {
           font-weight: 500;
+        }
+      }
+
+      .to-hide {
+        .filter__wrapper__arrow {
+          transform: rotateZ(90deg);
         }
       }
 
@@ -74,6 +81,10 @@
         flex-direction: column;
         gap: 25px;
         border-bottom: var(--borderWidth) var(--borderColor) solid;
+      }
+
+      .movies__main__filters__filters__dropdown__runTime {
+        border-bottom: none;
       }
     }
 

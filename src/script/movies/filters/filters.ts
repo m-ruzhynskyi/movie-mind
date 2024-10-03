@@ -3,6 +3,7 @@ import setupSliders from "../../functions/setupSliders.js";
 import {renderGenres} from "../../functions/renderAndSetGenres.js";
 import saveToLocalStorage from "../../functions/saveToLocalStorage.js";
 import saveSortToLocal from "../../functions/saveSortToLocal.js";
+import handlerSearch from "../../functions/handlerSearch.js";
 
 const sortShowButton: HTMLElement | null = document.querySelector('.movies__main__filters__wrapper')
 const sortDropdown: HTMLElement | null = document.querySelector('.movies__main__filters__sort__dropdown')
@@ -18,7 +19,6 @@ const ratingFrom: HTMLInputElement | null = document.querySelector('.sliders_con
 
 const runTimeTo: HTMLInputElement | null = document.querySelector('.sliders_control__runTime-to')
 const runTimeFrom: HTMLInputElement | null = document.querySelector('.sliders_control__runTime-from')
-
 
 const sort: HTMLSelectElement | null = document.querySelector('.movies__main__filters__sort__dropdown__select')
 
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded',
   () => {
     renderGenres();
     setupSliders();
+    handlerSearch();
     if (releaseDateFrom) releaseDateFrom.max = new Date().getFullYear().toString();
   }
 )
