@@ -1,3 +1,5 @@
+import searchBar from "../movies/searchBar.js";
+
 function goToAnotherPage(section: string) {
   const agendaSection: HTMLElement | null = document.querySelector('.agenda')
   const moviesSection: HTMLElement | null = document.querySelector('.movies')
@@ -32,5 +34,8 @@ links.forEach(link =>
   link.addEventListener('click', (event) => goToAnotherPage((event.currentTarget as HTMLParagraphElement).textContent || ''))
 );
 
-document.addEventListener('DOMContentLoaded', () => goToAnotherPage('movies'));
+document.addEventListener('DOMContentLoaded', () => {
+  goToAnotherPage('movies')
+  searchBar()
+});
 window.addEventListener('beforeunload', () => localStorage.clear());

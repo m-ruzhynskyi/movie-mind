@@ -1,4 +1,4 @@
-import IGenre from "../interfaces/IGenre.js";
+import IGenre from "../../../interfaces/IGenre.js";
 import getGenres from "./getGenres.js";
 import searchButtonIndicator from "./searchButtonIndicator.js";
 

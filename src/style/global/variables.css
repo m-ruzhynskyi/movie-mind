@@ -12,8 +12,11 @@
   --hoverDaySection: rgba(175, 208, 182, 0.52);
   --formBg: #F8F8F8;
   --inputTextColor: #4d4d4d;
+  --textColor: #3f341d;
+  --textColorHover: #42781b;
   --disabled: #a0a0a0;
   --disabledBorder: #b7b7b7;
+  --ratingBg: #081C22;
   --borderWidth: 3px;
   --mainFont: 'Poppins';
   --logoFont: 'Rammetto One';

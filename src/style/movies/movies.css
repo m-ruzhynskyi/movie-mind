@@ -1,6 +1,8 @@
 @import url('filters/filtres.css');
 
 .movies {
+  margin-bottom: 80px;
+
   .movies__header__wrapper {
     background-image: url("../../assets/img/movies_bg.png");
     background-size: cover;
@@ -50,6 +52,123 @@
           font-size: 18px;
         }
       }
+    }
+  }
+
+  .movies__main {
+    display: flex;
+    gap: 50px;
+
+    .movies__main__list__wrapper {
+      .movies__main__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 25px;
+        position: relative;
+
+        .movies__main__list__movie {
+          max-width: 165px;
+          background-color: var(--selectBg);
+
+          .movies__main__list__movie__img {
+            max-width: 165px;
+            height: 250px;
+            cursor: pointer;
+            user-select: none;
+          }
+
+          .movies__main__list__movie__info {
+            position: relative;
+            background-color: inherit;
+            padding: 26px 10px 12px 10px;
+
+            .movies__main__list__movie__info__title, .movies__main__list__movie__info__releaseDate {
+              font-size: 16px;
+              color: var(--textColor);
+            }
+
+            .movies__main__list__movie__info__title {
+              cursor: pointer;
+
+              &:hover {
+                text-decoration: underline;
+                color: var(--textColorHover);
+              }
+            }
+
+            .movies__main__list__movie__info__rating {
+              background-color: var(--ratingBg);
+              user-select: none;
+              padding: 10px 8px;
+              border-radius: 100%;
+              width: fit-content;
+              position: absolute;
+              top: -25px;
+
+              .movies__main__list__movie__info__rating__text {
+                background-color: transparent;
+              }
+            }
+
+            .good {
+              box-shadow: inset 0 0 0 4px green;
+            }
+
+            .normal {
+              box-shadow: inset 0 0 0 4px darkorange;
+            }
+
+            .awful {
+              box-shadow: inset 0 0 0 4px darkred;
+            }
+
+            & > * {
+              background-color: inherit;
+            }
+          }
+        }
+
+      }
+    }
+
+    .movies__main__list__button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 15px 0;
+      cursor: pointer;
+
+      border: solid 5px var(--borderColor);
+      user-select: none;
+
+      font-size: 21px;
+      font-weight: 500;
+
+      &:hover {
+        background: var(--buttonHover);
+      }
+
+      &:focus {
+        background: var(--buttonHover);
+      }
+
+      &:active {
+        background: var(--buttonActive);
+      }
+    }
+
+    .clearSearch {
+      padding: 8px 0;
+      cursor: pointer;
+      border: solid 5px var(--borderColor);
+      user-select: none;
+      font-size: 16px;
+      font-weight: 500;
+      width: 150px;
+      border-radius: 25px;
+      margin: 0;
     }
   }
 }

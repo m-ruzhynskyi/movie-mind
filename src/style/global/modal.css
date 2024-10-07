@@ -1,0 +1,93 @@
+.modal__wrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  z-index: 1000;
+
+  .modal {
+    width: min-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    position: relative;
+
+    .modal__close {
+      position: absolute;
+      width: 45px;
+      background-color: transparent;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+
+    .modal__info {
+      padding: 20px 35px 20px 0;
+      width: max-content;
+      height: fit-content;
+      margin: auto;
+
+      .modal__info__title {
+        font-size: 32px;
+        font-weight: 600;
+      }
+
+      .modal__movie__overview__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 15px;
+
+        .modal__movie__overview__text {
+          font-size: 21px;
+          font-weight: 500;
+        }
+
+        .modal__movie__overview {
+          font-size: 18px;
+          font-weight: 400;
+          max-width: 500px;
+          text-align: justify;
+        }
+      }
+
+      .modal__movie__info {
+        .modal__movie__info__paragraph {
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: -4px;
+        }
+      }
+
+      .modal__movie__details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 30px 0 0 0;
+        align-items: center;
+
+        .modal__movie__details__div {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5px;
+
+          .details__title {
+            font-weight: 500;
+            font-size: 18px;
+          }
+
+          .details__text {
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

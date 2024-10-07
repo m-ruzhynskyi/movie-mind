@@ -1,5 +1,5 @@
-import monthController from "../functions/monthController.js";
-import getCurrentMonthId from "../functions/getCurrentMonthId.js";
+import monthController from "../functions/agenda/monthController.js";
+import getCurrentMonthId from "../functions/agenda/getCurrentMonthId.js";
 
 const agendaNextArrow: HTMLButtonElement | null = document.querySelector('.agenda__nav__regulations__arrow-next');
 const agendaPrevArrow: HTMLButtonElement | null = document.querySelector('.agenda__nav__regulations__arrow-prev');

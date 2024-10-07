@@ -1,5 +1,5 @@
 // @ts-ignore
-import months from '../variables/months.js'
+import months from '../../variables/months.js'
 
 export default function monthController(isNext: boolean = true, monthNow: number, setCurrentMonth: boolean = false): string {
 

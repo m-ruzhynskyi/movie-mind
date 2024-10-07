@@ -4,6 +4,8 @@
 @import '../global/variables.css';
 @import '../movies/movies.css';
 @import '../agenda/agenda.css';
+@import './modal.css';
+
 
 *,
 *::before,
@@ -25,6 +27,8 @@
 }
 
 .wrapper {
+  position: relative;
+
   .container {
     max-width: 1440px;
     margin: 0 auto;

@@ -1,4 +1,4 @@
-import IGenre from "../interfaces/IGenre.js";
+import IGenre from "../../../interfaces/IGenre.js";
 
 interface IGenreResponse {
   genres: IGenre[];
@@ -16,8 +16,6 @@ export default async function fetchGenres(): Promise<IGenre[]> {
         Authorization: AUTH_TOKEN,
       },
     });
-
-    if (!response.ok) throw new Error(`Error fetching genres: ${response.statusText}`);
     const data: IGenreResponse = await response.json();
     return data.genres;
   } catch (error) {
