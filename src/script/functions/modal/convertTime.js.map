@@ -1,0 +1,1 @@
+{"version":3,"file":"convertTime.js","sourceRoot":"","sources":["../../../src/script/functions/modal/convertTime.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,UAAU,WAAW,CAAC,OAAe;IACjD,MAAM,KAAK,GAAG,IAAI,CAAC,KAAK,CAAC,OAAO,GAAG,EAAE,CAAC,CAAC;IACvC,MAAM,gBAAgB,GAAG,OAAO,GAAG,EAAE,CAAC;IAEtC,OAAO,GAAG,KAAK,KAAK,gBAAgB,KAAK,CAAC;AAC5C,CAAC"}

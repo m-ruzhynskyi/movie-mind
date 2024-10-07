@@ -1,0 +1,1 @@
+{"version":3,"file":"fomatCurrency.js","sourceRoot":"","sources":["../../../src/script/functions/modal/fomatCurrency.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,UAAU,cAAc,CAAC,KAAa;IAClD,OAAO,IAAI,IAAI,CAAC,YAAY,CAAC,OAAO,EAAE;QACpC,KAAK,EAAE,UAAU;QACjB,QAAQ,EAAE,KAAK;QACf,qBAAqB,EAAE,CAAC;KACzB,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC;AACnB,CAAC"}

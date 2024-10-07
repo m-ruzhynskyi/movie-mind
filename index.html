@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/style/global/global.css">
+  <title>MovieMind</title>
+</head>
+<body>
+<div class="wrapper">
+  <header class="container header">
+    <p class="header__title">MovieMind</p>
+    <nav class="header__nav-wrapper">
+      <ul class="header__nav">
+<!--        <li class="header__nav__item">-->
+<!--          <p class="agenda__link">Agenda</p>-->
+<!--          <div class="underline"></div>-->
+<!--        </li>-->
+        <li class="header__nav__item">
+          <p class="movies__link">Movies</p>
+          <div class="underline"></div>
+        </li>
+<!--        <li class="header__nav__item">-->
+<!--          <p class="reviews__link">Reviews</p>-->
+<!--          <div class="underline"></div>-->
+<!--        </li>-->
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="movies">
+      <div class="movies__header__wrapper">
+        <header class="container movies__header">
+          <h1 class="movies__header__title">Welcome. <br>
+            Millions of movies, TV shows and people to discover. Explore now.</h1>
+          <form class="movies__header__search">
+            <input class="movies__header__search__input" type="text"
+                   placeholder="Search for a movie, tv show, person......" required>
+            <button class="movies__header__search__button" type="submit">Search</button>
+          </form>
+        </header>
+      </div>
+      <main class="movies__main container"  >
+        <div class="movies__main__filters">
+          <div class='movies__main__filters__sort filter'>
+            <div class="movies__main__filters__wrapper filter__wrapper">
+              <p class="movies__main__filters__sort__title filter__wrapper__title">Sort</p>
+              <img class="movies__main__filters__sort__arrow filter__wrapper__arrow" src="src/assets/svg/arrow.svg"
+                   alt="Arrow">
+            </div>
+            <div class="movies__main__filters__sort__dropdown filter__wrapper__dropdown hidedDropdown">
+              <p class="movies__main__filters__sort__dropdown__title filter__wrapper__dropdown__title ">Sort Results
+                By</p>
+              <label>
+                <select class="movies__main__filters__sort__dropdown__select filter__wrapper__dropdown__select">
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="popularity.desc"
+                      selected>
+                    Popularity Descending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="popularity.asc">
+                    Popularity Ascending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="vote_average.desc">Rating
+                    Descending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="vote_average.asc">Rating
+                    Ascending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="release_date.desc">
+                    Release Date Descending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="release_date.asc">Release
+                    Date Ascending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="original_title.desc">
+                    Original Title Descending
+                  </option>
+                  <option
+                      class="movies__main__filters__sort__dropdown__select__option filter__wrapper__dropdown__select__option"
+                      value="original_title.asc">
+                    Original Title Ascending
+                  </option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class='movies__main__filters__filters filter'>
+            <div class="movies__main__filters__filters__wrapper filter__wrapper hided">
+              <p class="movies__main__filters__sort__title filter__wrapper__title">Filters</p>
+              <img class="movies__main__filters__sort__arrow filter__wrapper__arrow" src="src/assets/svg/arrow.svg"
+                   alt="Arrow">
+            </div>
+            <div class="movies__main__filters__filters__dropdown hidedDropdown filter__wrapper__dropdown">
+              <div class="movies__main__filters__filters__dropdown__releaseDate">
+                <p class="movies__main__filters__filters__dropdown__releaseDate__title filter__wrapper__dropdown__title">
+                  Release Date</p>
+                <form class="sliders_control">
+                  <label
+                      class="sliders_control__label sliders_control__label__releaseDate-from sliders_control__label-from"
+                      for="fromSlider"><span class="sliders_control__label__span-from">1900</span></label>
+                  <input class="sliders_control__releaseDate-from sliders_control-from" type="range" min="1900"
+                         max="2024" value="2024"
+                         id="fromSlider">
+                  <label class="sliders_control__label sliders_control__label__releaseDate-to sliders_control__label-to"
+                         for="toSlider"><span class="sliders_control__label__span-to">2024</span></label>
+                  <input class="sliders_control__releaseDate-to sliders_control-to" type="range" min="1900" max="2024"
+                         value="1900"
+                         id="toSlider">
+                </form>
+              </div>
+              <div class="movies__main__filters__filters__dropdown__genres">
+                <p class="movies__main__filters__filters__dropdown__genres__title filter__wrapper__dropdown__title">
+                  Genres</p>
+                <ul class="movies__main__filters__filters__dropdown__genres__ul">
+                </ul>
+              </div>
+              <div class="movies__main__filters__filters__dropdown__rating">
+                <p class="movies__main__filters__filters__dropdown__rating__title filter__wrapper__dropdown__title">
+                  Rating</p>
+                <form class="sliders_control">
+                  <label class="sliders_control__label sliders_control__label__rating-from sliders_control__label-from"
+                         for="fromSliderRating"><span class="sliders_control__label__span-from">0</span></label>
+                  <input class="sliders_control__rating-from sliders_control-from" type="range" min="0" max="10"
+                         value="10"
+                         id="fromSliderRating">
+                  <label class="sliders_control__label sliders_control__label__rating-to sliders_control__label-to"
+                         for="toSliderRating"><span class="sliders_control__label__span-to">10</span></label>
+                  <input class="sliders_control__rating-to sliders_control-to" type="range" min="0" max="10" value="0"
+                         id="toSliderRating">
+                </form>
+              </div>
+              <div class="movies__main__filters__filters__dropdown__runTime">
+                <p class="movies__main__filters__filters__dropdown__runTime__title filter__wrapper__dropdown__title">
+                  Runtime</p>
+                <form class="sliders_control">
+                  <label class="sliders_control__label sliders_control__label__runTime-from sliders_control__label-from"
+                         for="fromSliderRunTime"><span class="sliders_control__label__span-from">0</span>
+                    minutes</label>
+                  <input class="sliders_control__runTime-from sliders_control-from" type="range" min="0" max="400"
+                         value="400" step="10"
+                         id="fromSliderRunTime">
+                  <label class="sliders_control__label sliders_control__label__runTime-to sliders_control__label-to"
+                         for="toSliderRunTime"><span class="sliders_control__label__span-to">400</span> minutes</label>
+                  <input class="sliders_control__runTime-to sliders_control-to" type="range" min="0" max="400" value="0"
+                         step="10"
+                         id="toSliderRunTime">
+                </form>
+              </div>
+            </div>
+          </div>
+          <button class="movies__main__filters__button disabled">Search</button>
+        </div>
+        <div class="movies__main__list__wrapper">
+          <div class="movies__main__list"></div>
+          <button class="movies__main__list__button" data-page="1">Load More</button>
+        </div>
+      </main>
+    </section>
+<!--    <section style="display: none" class="agenda">-->
+<!--      <div class="agenda__nav">-->
+<!--        <button class="agenda__nav__button">Today</button>-->
+<!--        <div class="agenda__nav__regulations">-->
+<!--          <button class="agenda__nav__regulations__wrapper">-->
+<!--            <svg class="agenda__nav__regulations__arrow-prev"-->
+<!--                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330"-->
+<!--                 xml:space="preserve">-->
+<!--            <g id="SVGRepo_bgCarrier" stroke-width="2px"></g>-->
+<!--              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>-->
+<!--              <g id="SVGRepo_iconCarrier">-->
+<!--              <path id="XMLID_222_" stroke="#E7FBE6" stroke-width="40px"-->
+<!--                    d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z">-->
+<!--              </path>-->
+<!--            </g>-->
+<!--          </svg>-->
+<!--          </button>-->
+<!--          <button class="agenda__nav__regulations__wrapper">-->
+<!--            <svg class="agenda__nav__regulations__arrow-next"-->
+<!--                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330"-->
+<!--                 xml:space="preserve">-->
+<!--            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>-->
+<!--              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>-->
+<!--              <g id="SVGRepo_iconCarrier">-->
+<!--              <path id="XMLID_222_" stroke="#E7FBE6" stroke-width="40px"-->
+<!--                    d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z">-->
+<!--              </path>-->
+<!--            </g>-->
+<!--          </svg>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        <p class="agenda__nav__month">September 2024</p>-->
+<!--      </div>-->
+<!--      <div class="agenda__content">-->
+<!--        <div class="agenda__content__day">-->
+<!--          <div class="agenda__content__day__title">-->
+<!--            <p>-->
+<!--              Monday-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--        </div>-->
+<!--        <div class="agenda__content__day">-->
+<!--          <div class="agenda__content__day__title">-->
+<!--            <p>-->
+<!--              Tuesday-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--        </div>-->
+<!--        <div class="agenda__content__day">-->
+<!--          <div class="agenda__content__day__title">-->
+<!--            <p>-->
+<!--              Wednesday-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--        </div>-->
+<!--        <div class="agenda__content__day">-->
+<!--          <div class="agenda__content__day__title">-->
+<!--            <p>-->
+<!--              Thursday-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--        </div>-->
+<!--        <div class="agenda__content__day">-->
+<!--          <div class="agenda__content__day__title">-->
+<!--            <p>-->
+<!--              Friday-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--        </div>-->
+<!--        <div class="agenda__content__day">-->
+<!--          <div class="agenda__content__day__title">-->
+<!--            <p>-->
+<!--              Saturday-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--        </div>-->
+<!--        <div class="agenda__content__day">-->
+<!--          <div class="agenda__content__day__title">-->
+<!--            <p>-->
+<!--              Sunday-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--          <div class="agenda__content__day__week__day"></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+  </main>
+</div>
+<script type="module" src="src/script/global/global.js"></script>
+<script type="module" src="src/script/movies/filters/filters.js"></script>
+</body>
+</html>

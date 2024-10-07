@@ -1,6 +1,6 @@
-@import url('./slidersControl.css');
-@import url('./genre.css');
-@import url('./searchButton.css');
+@import url('slidersControl.css');
+@import url('genre.css');
+@import url('searchButton.css');
 
 .movies__main {
   padding: 0 50px;
